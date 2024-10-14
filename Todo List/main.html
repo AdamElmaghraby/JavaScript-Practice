@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <style>
+      /* Add Item Button Style */
+      #addItem {
+        background: linear-gradient(135deg, #6c757d, #495057);
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.2s ease, transform 0.1s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Hover Effect */
+      #addItem:hover {
+        background: linear-gradient(135deg, #5a6268, #343a40);
+      }
+
+      /* Active/Pressed Effect */
+      #addItem:active {
+        transform: scale(0.98);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      body {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 20px;
+      }
+
+      /* Input Field Style */
+      #itemInput {
+        width: 300px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        font-size: 16px;
+      }
+
+      /* Container Style */
+      #items > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Space between text and button */
+        background-color: #e0e0e0;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.2s ease;
+      }
+
+      /* Item Text Style */
+      #items p {
+        margin: 0;
+        font-size: 18px;
+        color: #555;
+      }
+
+      /* Delete Button Style */
+      #items button {
+        background-color: #ff4c4c;
+        border: none;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      #items button:hover {
+        background-color: #ff3333;
+      }
+
+      /* Hover Effect for Item Container */
+      #items > div:hover {
+        background-color: #d5d5d5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TODO List</h1>
+    <h2>Items</h2>
+    <div id="items"></div>
+    <input id="itemInput" type="text" placeholder="Add an item" />
+    <button id="addItem" onclick="addItems()">Add Item</button>
+    <script src="index.js"></script>
+  </body>
+</html>
